@@ -7,16 +7,16 @@
  */
 int is_num(char *n)
 {
-        int i;
+int i;
 
-        for (i = 0; n && n[i]; i++)
-        {
-                if (i == 0 && (n[i] == '-' || n[i] == '+'))
-                        continue;
-                if (n[i] < '0' || n[i] > '9')
-                        return (0);
-        }
-        return (1);
+for (i = 0; n && n[i]; i++)
+{
+if (i == 0 && (n[i] == '-' || n[i] == '+'))
+continue;
+if (n[i] < '0' || n[i] > '9')
+return (0);
+}
+return (1);
 }
 /**
  * sq_push - push new node to stack
@@ -25,25 +25,25 @@ int is_num(char *n)
  */
 void sq_push(stack_t **stack, unsigned int line_number)
 {
-        stack_t *new_node;
+stack_t *new_node;
 
-        if (is_num(memory1.op_arg) == 0)
-        {
-                fprintf(stderr, "L%u: usage: push integer\n", line_number);
-                free_mem(stack);
-                exit(EXIT_FAILURE);
-        }
-        new_node = malloc(sizeof(stack_t));
-        if (new_node == NULL)
-        {
-                fprintf(stderr, "Error: malloc failed\n");
-                free_mem(stack);
-                exit(EXIT_FAILURE);
-        }
-        new_node->n = atoi(memory1.op_arg);
-        new_node->prev = NULL;
-        new_node->next = *stack;
-        if (*stack)
-                (*stack)->prev = new_node;
-        *stack = new_node;
+if (is_num(memory1.op_arg) == 0)
+{
+fprintf(stderr, "L%u: usage: push integer\n", line_number);
+free_mem(stack);
+exit(EXIT_FAILURE);
+}
+new_node = malloc(sizeof(stack_t));
+if (new_node == NULL)
+{
+fprintf(stderr, "Error: malloc failed\n");
+free_mem(stack);
+exit(EXIT_FAILURE);
+}
+new_node->n = atoi(memory1.op_arg);
+new_node->prev = NULL;
+new_node->next = *stack;
+if (*stack)
+(*stack)->prev = new_node;
+*stack = new_node;
 }

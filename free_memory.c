@@ -8,14 +8,14 @@
  */
 void free_mem(stack_t **stack)
 {
-        stack_t *tmp;
+stack_t *tmp;
 
-        while (*stack)
-        {
-                tmp = *stack;
-                *stack = (*stack)->next;
-                free(tmp);
-        }
-        free(memory1.op_name);
-        fclose(memory1.m_file);
+while (*stack)
+{
+tmp = *stack;
+*stack = (*stack)->next;
+free(tmp);
+}
+free(memory1.op_name);
+fclose(memory1.m_file);
 }
