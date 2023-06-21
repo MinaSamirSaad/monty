@@ -10,7 +10,7 @@ size_t sz = 0;
 unsigned int i, l_number = 0;
 stack_t *head = NULL;
 instruction_t arr[] = { {"push", sq_push}, {"pall", sq_pall},
-{"pint", sq_pint}, {"pop", sq_pop}, {NULL, NULL} };
+{"pint", sq_pint}, {"pop", sq_pop}, {"swap", sq_swap}, {NULL, NULL} };
 
 /* read file line by line(\n) until EOF or error then getline -> -1 */
 /* getline in stdio.h only in linux not in windows */
