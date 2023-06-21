@@ -9,7 +9,9 @@ int is_num(char *n)
 {
 int i;
 
-for (i = 0; n && n[i]; i++)
+if (n == NULL)
+	return (0);
+for (i = 0; n[i]; i++)
 {
 if (i == 0 && (n[i] == '-' || n[i] == '+'))
 continue;
