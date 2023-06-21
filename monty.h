@@ -76,5 +76,6 @@ void sq_div(stack_t **stack, unsigned int line_number);
 void sq_mul(stack_t **stack, unsigned int line_number);
 void sq_mod(stack_t **stack, unsigned int line_number);
 void sq_pchar(stack_t **stack, unsigned int line_number);
+void sq_pstr(stack_t **stack, unsigned int line_number);
 
 #endif
