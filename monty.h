@@ -69,5 +69,7 @@ void sq_pall(stack_t **stack, unsigned int line_number);
 void sq_pint(stack_t **stack, unsigned int line_number);
 void sq_pop(stack_t **stack, unsigned int line_number);
 void sq_swap(stack_t **stack, unsigned int line_number);
+void sq_add(stack_t **stack, unsigned int line_number);
+
 
 #endif
