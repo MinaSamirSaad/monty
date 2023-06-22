@@ -55,7 +55,7 @@ if (*stack)
 else
 {
 temp = *stack;
-while (temp->next != NULL)
+while (temp && temp->next != NULL)
 temp = temp->next;
 new_node->prev = temp;
 new_node->next = NULL;
