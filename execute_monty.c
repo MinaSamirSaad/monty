@@ -20,6 +20,7 @@ instruction_t arr[] = {{"push", sq_push}, {"pall", sq_pall}, {"pint", sq_pint},
 while (getline(&str_line, &sz, memory1.m_file) != -1)
 {
 l_number++;
+memory1.line = str_line;
 memory1.op_name = strtok(str_line, " \n");
 /* check if line empty or comment line*/
 if (memory1.op_name == NULL || memory1.op_name[0] == '#')

@@ -40,11 +40,8 @@ void (*f)(stack_t **stack, unsigned int line_number);
 
 /**
  * struct global_memory - contain the file (monty script)
- * and op_name (first arg from the current line in that file
- * since op_name is the first contain the address of the first char
- * of that line obtained from monty file by getline function
- * so if free op_name it will free the whole line as well
  *
+ * @line: used to free allocated space by getline
  * @op_name: operation name (ex: push , pop)
  * @op_arg: operation args (ex : push 10)
  * @m_file: file contains the lines to interpreted
@@ -52,6 +49,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
  */
 typedef struct global_memory
 {
+char *line;
 char *op_name;
 char *op_arg;
 FILE *m_file;

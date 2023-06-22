@@ -16,6 +16,6 @@ tmp = *stack;
 *stack = (*stack)->next;
 free(tmp);
 }
-free(memory1.op_name);
+free(memory1.line);
 fclose(memory1.m_file);
 }
