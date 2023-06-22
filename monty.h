@@ -59,7 +59,6 @@ int mode;
 /* global variable */
 my_memory memory1;
 
-
 void execute_monty(void);
 void free_mem(stack_t **stack);
 
