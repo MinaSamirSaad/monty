@@ -13,7 +13,7 @@ instruction_t arr[] = {{"push", sq_push}, {"pall", sq_pall}, {"pint", sq_pint},
 {"pop", sq_pop}, {"swap", sq_swap}, {"add", sq_add}, {"nop", sq_nop},
 {"sub", sq_sub}, {"div", sq_div}, {"mul", sq_mul}, {"mod", sq_mod},
 {"pchar", sq_pchar}, {"pstr", sq_pstr}, {"rotl", sq_rotl},
-{"rotr", sq_rotr}, {NULL, NULL}};
+{"rotr", sq_rotr}, {"queue", sq_mode}, {"stack", sq_mode}, {NULL, NULL}};
 
 /* read file line by line(\n) until EOF or error then getline -> -1 */
 /* getline in stdio.h only in linux not in windows */

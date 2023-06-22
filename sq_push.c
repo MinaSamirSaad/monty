@@ -10,7 +10,7 @@ int is_num(char *n)
 int i;
 
 if (n == NULL)
-	return (0);
+return (0);
 for (i = 0; n[i]; i++)
 {
 if (i == 0 && (n[i] == '-' || n[i] == '+'))
@@ -28,6 +28,7 @@ return (1);
 void sq_push(stack_t **stack, unsigned int line_number)
 {
 stack_t *new_node;
+stack_t *temp;
 
 if (is_num(memory1.op_arg) == 0)
 {
@@ -43,9 +44,24 @@ free_mem(stack);
 exit(EXIT_FAILURE);
 }
 new_node->n = atoi(memory1.op_arg);
+if (memory1.mode == 0)
+{
 new_node->prev = NULL;
 new_node->next = *stack;
 if (*stack)
 (*stack)->prev = new_node;
 *stack = new_node;
+}
+else
+{
+temp = *stack;
+while (temp->next != NULL)
+temp = temp->next;
+new_node->prev = temp;
+new_node->next = NULL;
+if (temp)
+temp->next = new_node;
+else
+*stack = new_node;
+}
 }

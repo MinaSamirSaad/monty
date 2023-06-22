@@ -45,7 +45,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
  * @op_name: operation name (ex: push , pop)
  * @op_arg: operation args (ex : push 10)
  * @m_file: file contains the lines to interpreted
- *
+ * @mode: if 0 will be stack other will be queue
  */
 typedef struct global_memory
 {
@@ -53,6 +53,7 @@ char *line;
 char *op_name;
 char *op_arg;
 FILE *m_file;
+int mode;
 } my_memory;
 
 /* global variable */
@@ -77,6 +78,6 @@ void sq_pchar(stack_t **stack, unsigned int line_number);
 void sq_pstr(stack_t **stack, unsigned int line_number);
 void sq_rotl(stack_t **stack, unsigned int line_number);
 void sq_rotr(stack_t **stack, unsigned int line_number);
-
+void sq_mode(stack_t **stack, unsigned int line_number);
 
 #endif
